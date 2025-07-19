@@ -1,0 +1,412 @@
+/* General Body & Font Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5; /* Latar belakang abu-abu terang */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Main Wrapper for overall layout */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* SECTION 1: Welcome / Landing Section Styling */
+.welcome-section {
+    background-color: #A38ED8; /* Ungu yang lebih lembut/pastel */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Untuk memposisikan konten & tombol */
+    align-items: center;
+    min-height: 100vh; /* Memastikan section ini setidaknya setinggi viewport */
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.welcome-content {
+    flex-grow: 1; /* Konten tumbuh untuk mengisi ruang */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Memusatkan konten teks */
+    align-items: center;
+    width: 100%;
+    max-width: 900px; /* Batasi lebar teks agar tidak terlalu panjang */
+    margin-top: 50px; /* Jarak dari atas */
+}
+
+.main-title {
+    font-size: 3.8em;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.tagline {
+    font-size: 1.6em;
+    color: #5d6d7e;
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+.welcome-bottom {
+    padding-bottom: 50px; /* Jarak bawah tombol dari bottom section */
+}
+
+/* Tombol Mulai (untuk Welcome Section) */
+.start-button {
+    background: linear-gradient(45deg, #7ad277, #4CAF50);
+    color: white;
+    padding: 18px 60px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.4em;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.start-button:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(76, 175, 80, 0.6);
+}
+
+/* Ikon/Stiker di Welcome Section */
+.icon-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.icon-container .icon {
+    font-size: 2.5em;
+    color: #f0f0f0;
+    opacity: 0.7;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.icon-container.right {
+    left: auto;
+    right: 20px;
+}
+
+/* Lingkaran dekoratif di Welcome Section */
+.circle {
+    position: absolute;
+    background-color: #f7d5e4; /* Pink pastel */
+    border-radius: 50%;
+    opacity: 0.7;
+    filter: blur(5px);
+    z-index: 0;
+}
+
+.welcome-circle-top-right {
+    width: 280px;
+    height: 280px;
+    top: -120px;
+    right: -100px;
+}
+
+.welcome-circle-bottom-left {
+    width: 230px;
+    height: 230px;
+    bottom: -120px;
+    left: -100px;
+}
+
+/* SECTION 2: Features Section Styling - INI YANG DITINGKATKAN */
+.features-section {
+    padding: 80px 20px; /* Padding atas dan bawah lebih besar */
+    background: linear-gradient(to bottom, #f0f2f5, #e0e4eb); /* Gradien latar belakang halus */
+    text-align: center; /* Untuk memusatkan header */
+}
+
+.features-header {
+    margin-bottom: 60px; /* Jarak bawah lebih besar dari grid */
+}
+
+.features-heading {
+    font-size: 3em; /* Judul lebih besar */
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    position: relative; /* Untuk efek garis bawah */
+    display: inline-block; /* Agar garis bawah pas dengan teks */
+}
+
+/* Garis bawah di judul fitur */
+.features-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background-color: #8bc34a; /* Warna hijau */
+    border-radius: 2px;
+}
+
+.features-tagline {
+    font-size: 1.2em; /* Tagline lebih besar */
+    color: #5d6d7e;
+    max-width: 900px; /* Lebar maksimal tagline */
+    margin: 0 auto;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px; /* Jarak antar kartu lebih besar */
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch; /* Kartu akan memiliki tinggi yang sama */
+}
+
+/* Feature Card Styling - SANGAT CANTIK */
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 20px; /* Sudut lebih membulat */
+    padding: 35px; /* Padding lebih besar */
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Bayangan lebih halus tapi menonjol */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transisi lebih halus */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Mulai dari atas */
+    min-height: 320px; /* Tinggi minimum kartu yang lebih besar */
+    position: relative;
+    overflow: hidden; /* Penting untuk efek pseudo-elemen */
+    isolation: isolate; /* Memastikan stacking context untuk pseudo-elemen */
+}
+
+/* Efek background gradien dan hover untuk kartu */
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--card-color-light), var(--card-color-dark)); /* Menggunakan variabel CSS */
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: scaleY(0); /* Mulai dari nol */
+    transform-origin: bottom;
+    z-index: -1; /* Di belakang konten */
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+    transform: scaleY(1); /* Membesar saat hover */
+}
+
+.feature-card:hover {
+    transform: translateY(-12px); /* Lebih terangkat */
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15); /* Bayangan lebih kuat */
+    color: white; /* Teks berubah putih saat hover */
+}
+
+/* Warna spesifik untuk setiap kartu */
+.feature-card.card-blue { --card-color-light: #89cff0; --card-color-dark: #4682B4; } /* Biru */
+.feature-card.card-purple { --card-color-light: #c8a2c8; --card-color-dark: #800080; } /* Ungu */
+.feature-card.card-orange { --card-color-light: #FFD580; --card-color-dark: #FFA500; } /* Oranye */
+.feature-card.card-green { --card-color-light: #90EE90; --card-color-dark: #3CB371; } /* Hijau */
+
+
+/* Mengubah warna teks dan ikon saat hover */
+.feature-card:hover .card-title,
+.feature-card:hover .card-description,
+.feature-card:hover .card-icon-wrapper .card-icon {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.feature-card:hover .primary-btn {
+    background: white;
+    color: var(--card-color-dark); /* Warna tombol sesuai kartu */
+    box-shadow: none; /* Hilangkan bayangan tombol di hover kartu */
+}
+.feature-card:hover .primary-btn:hover {
+    background: #eee;
+    transform: translateY(-2px);
+}
+
+.card-icon-wrapper {
+    background-color: #f0f2f5; /* Latar belakang abu-abu terang untuk ikon */
+    border-radius: 50%; /* Bentuk lingkaran */
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Bayangan ikon */
+    transition: background-color 0.3s ease;
+}
+
+.feature-card:hover .card-icon-wrapper {
+    background-color: rgba(255, 255, 255, 0.2); /* Background ikon transparan saat hover kartu */
+}
+
+.card-icon {
+    font-size: 3.8em; /* Ukuran ikon lebih besar */
+    color: #9b72cf; /* Warna ikon ungu default */
+    transition: color 0.3s ease;
+}
+
+.card-title {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px; /* Jarak lebih besar */
+    line-height: 1.2;
+    transition: color 0.3s ease;
+}
+
+.card-description {
+    font-size: 1em;
+    color: #5d6d7e;
+    margin-bottom: 30px; /* Jarak lebih besar */
+    flex-grow: 1; /* Deskripsi mengisi ruang lebih baik */
+    transition: color 0.3s ease;
+}
+
+/* Wide Card for Kalender Self-Care */
+.feature-card.wide-card {
+    grid-column: span 2;
+    max-width: 700px; /* Batasi lebar pada layar besar */
+    margin: 0 auto;
+    min-height: 320px; /* Tinggi sama dengan kartu lain */
+}
+
+/* Primary Button Style (untuk tombol di dalam kartu) */
+.primary-btn {
+    background-color: #8bc34a;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.05em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    box-shadow: 0 4px 10px rgba(139, 195, 74, 0.3);
+    flex-shrink: 0; /* Mencegah tombol mengecil */
+}
+
+.primary-btn:hover {
+    background-color: #7cb342;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(139, 195, 74, 0.4);
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #bbb;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    margin-top: 60px; /* Jarak lebih besar dari grid fitur */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .main-title { font-size: 3em; }
+    .subtitle { font-size: 1.7em; }
+    .tagline { font-size: 1.4em; }
+    .start-button { padding: 15px 50px; font-size: 1.2em; }
+
+    .features-heading { font-size: 2.5em; }
+    .features-tagline { font-size: 1.1em; }
+
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    .feature-card {
+        min-height: 300px;
+    }
+    .feature-card.wide-card {
+        grid-column: span 1;
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title { font-size: 2.5em; margin-bottom: 10px; }
+    .subtitle { font-size: 1.5em; margin-bottom: 8px; }
+    .tagline { font-size: 1.2em; margin-top: 10px; }
+    .start-button { padding: 12px 40px; font-size: 1.1em; }
+    .icon-container .icon { font-size: 2em; }
+    .welcome-circle-top-right { width: 200px; height: 200px; top: -80px; right: -70px; }
+    .welcome-circle-bottom-left { width: 170px; height: 170px; bottom: -80px; left: -70px; }
+
+    .features-heading { font-size: 2em; margin-bottom: 10px;}
+    .features-heading::after { bottom: -5px; width: 60px; height: 3px; }
+    .features-tagline { font-size: 1em; }
+    .features-section { padding: 50px 15px; }
+
+    .features-grid {
+        gap: 20px;
+        grid-template-columns: 1fr; /* Semua kartu menjadi satu kolom */
+    }
+    .feature-card {
+        padding: 30px;
+        min-height: unset;
+    }
+    .card-icon-wrapper {
+        width: 70px; height: 70px;
+    }
+    .card-icon { font-size: 3.2em; }
+    .card-title { font-size: 1.5em; margin-bottom: 10px; }
+    .card-description { font-size: 0.95em; margin-bottom: 20px; }
+    .primary-btn { padding: 10px 25px; font-size: 1em; }
+    .footer { font-size: 0.85em; margin-top: 30px; }
+}
+
+@media (max-width: 480px) {
+    .main-title { font-size: 2em; }
+    .subtitle { font-size: 1.2em; }
+    .tagline { font-size: 1em; }
+    .start-button { padding: 10px 30px; font-size: 1em; }
+    .icon-container { top: 10px; left: 10px; gap: 10px; }
+    .icon-container .icon { font-size: 1.8em; }
+    .icon-container.right { right: 10px; }
+    .welcome-circle-top-right { width: 150px; height: 150px; top: -60px; right: -50px; }
+    .welcome-circle-bottom-left { width: 120px; height: 120px; bottom: -60px; left: -50px; }
+
+    .features-heading { font-size: 1.8em; }
+    .features-tagline { font-size: 0.9em; }
+    .features-section { padding: 40px 15px; }
+    .feature-card { padding: 25px; }
+    .card-icon-wrapper { width: 60px; height: 60px; margin-bottom: 20px; }
+    .card-icon { font-size: 2.8em; }
+    .card-title { font-size: 1.3em; }
+    .card-description { margin-bottom: 15px; }
+}
